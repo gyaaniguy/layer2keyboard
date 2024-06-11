@@ -52,27 +52,11 @@ Loop, Read, toggle_spacefn_settings.ini
 Loop, Read, toggle_spacefn_keys.ini
 {
     global keyAction
-    ; Split each line into key and action
     parts := StrSplit(A_LoopReadLine, ",")
     key := Trim(parts[1])
     action := Trim(parts[2])
-
-    ; Create hotkey 
     Hotkey, % "$*"key, ToggleHotkey
-
-    ; Store the action associated with the key
     keyAction[key] := action
-}
-
-
-; Function to show the mode status
-ShowModeStatus() {
-    global isAlternateMode
-    if (isAlternateMode) {
-        MsgBox, 0, Mode Status, Alternate Mode Activated
-    } else {
-        MsgBox, 0, Mode Status, Default Mode Activated
-    }
 }
 
 ; Function to handle hotkeys
@@ -81,26 +65,26 @@ ToggleHotkey() {
     global isAlternateMode
 
     key := SubStr(A_ThisHotkey,3) ; Extract the key pressed
-
     action := keyAction[key] ; Get the associated action
    ;MsgBox, 0, Mode Status, %key%
-
     if (isAlternateMode) {
-    	;MsgBox, 0, Mode Status, isAlternateMode..
-        Send, {Blind}{%action%} ; Send the action key
+        a := SubStr(A_ThisHotkey, 1, 1) = """"
+        if (SubStr(action, 1, 1) = """"){
+           Send, % SubStr(action, 2, -1) ; Send the action key
+        } else {
+           Send, {Blind}{%action%} ; Send the action key
+        }
     } else {
         Send, {Blind}%key% ; Send the original keyv
     }
 }
 
-; Toggle mode on Alt key press
+; Toggle layers
 SetLayerKey() {
     global isAlternateMode
     global settings 
     isAlternateMode := !isAlternateMode
-    
     ;MsgBox, % "HasKey('show_popup'): " settings.HasKey("show_popup")
- 
     if (isAlternateMode && ( !settings.HasKey("show_popup") || settings["show_popup"] = "true") ){
         popupText := settings["popup_text"] ? settings["popup_text"]: "Alt Layer" 
 	    ShowPopup( popupText )
