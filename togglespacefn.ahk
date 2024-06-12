@@ -50,7 +50,8 @@ Loop, Read, layer2_key_mappings.ini
             ; MsgBox, 0, Mode Status,%name%
             ; MsgBox, 0, Mode Status,%action%
         keyAction[name] := action
-        Hotkey, % "$*"name, ToggleHotkey
+        modifier := "$"
+        Hotkey, % modifier name, ToggleHotkey
     }
 }
 
@@ -58,9 +59,9 @@ Loop, Read, layer2_key_mappings.ini
 ToggleHotkey() {
     global keyAction
     global isAlternateMode
-    ;MsgBox, 0, Mode Status,%keyAction%
+    ;MsgBox, 0, Mode Status,%A_ThisHotkey%
 
-    key := SubStr(A_ThisHotkey,3) ; Extract the key pressed
+    key := SubStr(A_ThisHotkey,0) ; Extract the key pressed
     action := keyAction[key] ; Get the associated action
     if (isAlternateMode) {
         ; MsgBox, 0, Mode Status,%key%%action%%isAlternateMode%
