@@ -24,6 +24,9 @@ Key 'z' in layer 2 will Play Previous
 Key 'x' in layer 2 will send Play/Pause
 Key 'c' in layer 2 will Play Next
 
+3. Emulate Arrow Keys to reduce hand movement
+
+i,j,k,l are set as up,left,down,right keys. After getting used to this, your overall productivity will increase.
 
 
 
