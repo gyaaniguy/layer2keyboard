@@ -13,18 +13,17 @@ All keys and macros functions can be easily configured
 Press Alt to switch from/to layer 2. Can be changed to Shift / CapsLock / Ctrl
 
 
-## Example use cases: 
+## Example use cases:  
 
 1. Emulate Function keys with number row keys. F*  
 Key '1' in layer 2 will send F1   
-Key '2' in layer 2 will send F2   
-and so on  
+Key '2' in layer 2 will send F2    
+and so on   
 
-2. Easy access to Play/Pause and other media keys  
+2. Press media keys  
 
-i
-Keys 'z' 'c' plays Previous / next file
-Key 'x' presses Play/Pause 
+Keys 'z' 'c' plays Previous / next file  
+Key 'x' presses Play/Pause  
 
 3. Emulate Arrow Keys to reduce hand movement  
 
@@ -61,8 +60,6 @@ Below are the default key mappings for Layer 2. These can be customized in the `
 | y   | Home              |
 | n   | End               |
 | q   | "Thank you"       |
-| u   | Page Up (commented out) |
-| ,   | Page Down         |
 
 
 ## Configuration
