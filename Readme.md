@@ -16,6 +16,7 @@ Press Alt to switch from/to layer 2. Can be changed to Shift / CapsLock / Ctrl
 ## Example use cases:  
 
 1. Emulate Function keys with number row keys. F*  
+
 Key '1' in layer 2 will send F1   
 Key '2' in layer 2 will send F2    
 and so on   
@@ -25,7 +26,7 @@ and so on
 Keys 'z' 'c' plays Previous / next file  
 Key 'x' presses Play/Pause  
 
-3. Emulate Arrow Keys to reduce hand movement  
+3. Emulate Arrow Keys to reduce hand movement   
 
 i,j,k,l are set as left,up,down,right keys. After getting used to this, your overall productivity will increase.
 
