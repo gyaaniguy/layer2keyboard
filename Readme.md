@@ -1,10 +1,10 @@
 # Layer 2 Intro 
 
 
-Adds an extra 'layer' to the keyboard. - Layer 2
+Adds an extra 'layer' to the keyboard, that we can toggle on and off
 
-Essentially In this layer 2, pressing a key sends other key or keys. This is meant to emulate the behaviour of small keyboards, provide easy access to media keys.  
-In addition macros can be set. Useful to type repetitive text such as "Thank you".
+In layer 2, pressing a key sends some other key or keys.  
+This is meant to **emulate small keyboards** and provide easy access to **media keys**. In addition **macros** can be set. Useful to type repetitive text such as "Thank you".
 
 All keys and macros functions can be easily configured
 
